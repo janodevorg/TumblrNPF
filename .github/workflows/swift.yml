@@ -29,4 +29,5 @@ jobs:
 
       - name: Build and test
         run: |
-          swift test
+          xcodebuild build -destination 'platform=iOS Simulator,name=iPhone 13' -scheme 'TumblrNPF-Package'
+          xcodebuild test-without-building -destination 'platform=iOS Simulator,name=iPhone 13' -scheme 'TumblrNPF-Package'
