@@ -1,0 +1,44 @@
+name: tumblrnpf
+
+options:
+  bundleIdPrefix: dev.jano.tumblrnpf
+  usesTabs: false
+  indentWidth: 4
+  tabWidth: 4
+  createIntermediateGroups: true
+  deploymentTarget:
+    iOS: 15.2
+
+settings:
+    CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED: YES
+
+targets:
+
+  TumblrNPF:
+    type: framework
+    platform: iOS
+    scheme:
+      testTargets:
+         - TumblrNPFTests
+    settings:
+       CURRENT_PROJECT_VERSION: 1
+       INFOPLIST_FILE: targets/main/Info.plist
+       IPHONEOS_DEPLOYMENT_TARGET: 15.0
+       PRODUCT_BUNDLE_IDENTIFIER: dev.jano.tumblrnpf
+       PRODUCT_NAME: TumblrNPF
+    sources: 
+       - sources/main
+    type: framework
+
+  TumblrNPFTests:
+    type: bundle.unit-test
+    platform: iOS
+    settings:
+      INFOPLIST_FILE: targets/tests/Info.plist
+      IPHONEOS_DEPLOYMENT_TARGET: 15.0
+      PRODUCT_BUNDLE_IDENTIFIER: dev.jano.tumblrnpf.tests
+      TEST_HOST:
+    sources:
+      - sources/tests
+    dependencies:
+      - target: TumblrNPF

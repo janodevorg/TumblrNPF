@@ -1,0 +1,56 @@
+{
+    "post": {
+        "id": 12345,
+        "is_paywalled": true,
+        "paywall_access": "non-member"
+    },
+    "blog": {
+        "name": "blog-that-has-a-paywall",
+        "subscription_plan": {
+            "description": "Hey I'm Jeff....",
+            "currency_code": "USD",
+            "monthly_price": "199",
+            "yearly_price": "2000",
+            "member_perks": [
+                "bonus content"
+            ],
+            "subscription_label": "Post+",
+            "checkout_labels": {
+                "monthly": "Subscribe for %s/month*",
+                "yearly": "%s/year*. 2 months FREE!",
+                "support": "Show Your Support"
+            },
+            "is_valid": true
+        }
+    },
+    "content": [
+        {
+            "type": "text",
+            "text": "before the paywall"
+        },
+        {
+            "type": "paywall",
+            "subtype": "cta",
+            "title": "There's more to see...",
+            "text": "Get accessing to amazing content...",
+            "url": "http://THIS.WAS.NOT.IN.THE.EXAMPLE.BUT.ITS.MANDATORY"
+        }
+    ],
+    "layout": [
+        {
+            "type": "rows",
+            "display": [
+                {
+                    "blocks": [
+                        0
+                    ]
+                },
+                {
+                    "blocks": [
+                        1
+                    ]
+                }
+            ]
+        }
+    ]
+}

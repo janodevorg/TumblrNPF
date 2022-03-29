@@ -1,0 +1,30 @@
+[
+    {
+        "broken_blog_name": "old-broken-blog",
+        "content": [
+            {
+                "type": "text",
+                "text": "this is the root Post, which is broken"
+            }
+        ],
+        "layout": []
+    },
+    {
+        "broken_blog_name": "my blog name I ADDED THE POST ID BELOW BECAUSE ITS MANDATORY",
+        "post": {
+            "id": 123456789,
+            "timestamp": 1618950000
+        },
+        "content": [
+            {
+                "type": "text",
+                "text": "this is the parent Post, which is also broken"
+            },
+            {
+                "type": "text",
+                "text": "this is another text block in the broken parent Post"
+            },
+        ],
+        "layout": []
+    }
+]

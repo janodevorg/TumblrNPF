@@ -1,0 +1,31 @@
+{
+    "id": "1234567890",
+    "paywall_reblog_view": {
+        "content": [
+            {
+                "type": "text",
+                "text": "For Subscribers Only!",
+                "subtype": "heading1"
+            },
+            {
+                "type": "text",
+                "text": ""
+            },
+            {
+                "type": "text",
+                "text": "I bet you want to see what's below this line..."
+            },
+            {
+                "type": "paywall",
+                "url": "https://tumblr.com/creator/acoolblog",
+                "subtype": "cta",
+                "title": "For Supporters",
+                "text": "Support %s by subscribing to their +Posts. As a supporter you'll get access to exclusive content and perks.",
+                "is_visible": true
+            }
+        ],
+        "layout": [
+
+        ]
+    }
+}
