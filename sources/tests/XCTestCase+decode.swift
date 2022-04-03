@@ -4,13 +4,17 @@ import XCTest
 
 extension XCTestCase
 {
-    //class BundleFinder {}
+    private var log: Logger {
+        Logger(subsystem: "dev.jano", category: "tumblrnpf")
+    }
 
-    func decode<T: Decodable>(filename: String) -> T? {
-        guard let url = Bundle.module.url(forResource: filename, withExtension: "json"),
-            let jsonData = try? Data(contentsOf: url) else {
-                XCTFail("Missing \(filename).json. Is it added to build phases?")
-                return nil
+    func decode<T: Decodable>(filename: String, ext: String = "json") -> T?
+    {
+        let bundle = Bundle.module
+        let url = bundle.url(forResource: filename, withExtension: ext)
+        guard let url = url, let jsonData = try? Data(contentsOf: url) else {
+            XCTFail("Missing \"\(filename).\(ext)\". Bundle.module is \(bundle.bundlePath).")
+            return nil
         }
         do {
             return try JSONDecoder().decode(T.self, from: jsonData)
@@ -18,7 +22,7 @@ extension XCTestCase
             let errorMessage = "\(error)"
                 .components(separatedBy: ", ")
                 .joined(separator: ", \n                   ")
-            Logger(subsystem: "dev.jano", category: "apptests").warning("""
+            log.warning("""
                 Error decoding. Details follow...
                 Source JSON: \(filename)
                 Decoded type: \(T.self)

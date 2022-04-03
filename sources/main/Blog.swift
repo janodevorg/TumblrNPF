@@ -69,7 +69,7 @@ public struct Blog: Codable, Hashable, MirrorDescripting
         isHiddenFromBlogNetwork: Bool?,
         isOptoutAds: Bool?,
         name: String?,
-        paywallAccess: Bool?,
+        paywallAccess: CodableBoolOrString?,
         posts: [Post]?,
         shareLikes: Bool?,
         subscribed: Bool?,
