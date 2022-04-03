@@ -1,4 +1,5 @@
 import Foundation
+import CodableHelpers
 
 // swiftlint:disable discouraged_optional_boolean
 public struct Blog: Codable, Hashable, MirrorDescripting
@@ -15,7 +16,7 @@ public struct Blog: Codable, Hashable, MirrorDescripting
     public var isHiddenFromBlogNetwork: Bool?
     public var isOptoutAds: Bool?
     public var name: String?
-    public var paywallAccess: Bool?
+    public var paywallAccess: CodableBoolOrString?
     public var posts: [Post]?
     public var shareLikes: Bool?
     public var subscribed: Bool?
