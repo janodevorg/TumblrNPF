@@ -12,6 +12,12 @@ options:
 settings:
     CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED: YES
 
+packages:
+    
+  CodableHelpersDynamic:
+    url: git@github.com:janodevorg/CodableHelpers.git
+    from: 1.0.0
+
 targets:
 
   TumblrNPF:
@@ -20,6 +26,9 @@ targets:
     scheme:
       testTargets:
          - TumblrNPFTests
+    dependencies:
+      - package: CodableHelpersDynamic
+        embed: true
     settings:
        CURRENT_PROJECT_VERSION: 1
        INFOPLIST_FILE: targets/main/Info.plist

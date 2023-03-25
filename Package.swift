@@ -18,7 +18,7 @@ let package = Package(
         .target(
             name: "TumblrNPF",
             dependencies: [
-                .product(name: "CodableHelpers", package: "CodableHelpers"),
+                .product(name: "CodableHelpersDynamic", package: "CodableHelpers"),
             ],
             path: "sources/main"
         ),
