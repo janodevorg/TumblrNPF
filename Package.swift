@@ -7,8 +7,8 @@ let package = Package(
         .iOS(.v15)
     ],
     products: [
-        .library(name: "TumblrNPF", type: .dynamic, targets: ["TumblrNPF"]),
-        .library(name: "TumblrNPFStatic", type: .static, targets: ["TumblrNPF"])
+        .library(name: "TumblrNPF", type: .static, targets: ["TumblrNPF"]),
+        .library(name: "TumblrNPFDynamic", type: .dynamic, targets: ["TumblrNPF"])
     ],
     dependencies: [
         .package(url: "git@github.com:janodevorg/CodableHelpers.git", from: "1.0.0"),
