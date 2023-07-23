@@ -1,4 +1,4 @@
-// swift-tools-version:5.6
+// swift-tools-version:5.8
 import PackageDescription
 
 let package = Package(
@@ -7,8 +7,7 @@ let package = Package(
         .iOS(.v15)
     ],
     products: [
-        .library(name: "TumblrNPF", type: .static, targets: ["TumblrNPF"]),
-        .library(name: "TumblrNPFDynamic", type: .dynamic, targets: ["TumblrNPF"])
+        .library(name: "TumblrNPF", targets: ["TumblrNPF"])
     ],
     dependencies: [
         .package(url: "git@github.com:janodevorg/CodableHelpers.git", from: "1.0.0"),
