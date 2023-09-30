@@ -24,7 +24,7 @@ settings:
 
 packages:
     
-  CodableHelpersDynamic:
+  CodableHelpers:
     url: git@github.com:janodevorg/CodableHelpers.git
     from: 1.0.0
 
@@ -37,8 +37,8 @@ targets:
       testTargets:
          - TumblrNPFTests
     dependencies:
-      - package: CodableHelpersDynamic
-        embed: true
+      - package: CodableHelpers
+        embed: false
     settings:
        CURRENT_PROJECT_VERSION: 1
        INFOPLIST_FILE: targets/main/Info.plist

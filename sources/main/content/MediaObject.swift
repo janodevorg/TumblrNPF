@@ -1,5 +1,5 @@
 // swiftlint:disable discouraged_optional_boolean
-import UIKit
+import Foundation
 
 /**
  Media objects are used for image blocks, all kinds of posters (GIF, video, etc),
@@ -40,7 +40,7 @@ public struct MediaObject: Codable, Hashable
         guard let width = width, let height = height else {
             return nil
         }
-        return CGSize(width: width, height: height)
+        return CGSize(width: Double(width), height: Double(height))
     }
 
     public enum CodingKeys: String, CodingKey

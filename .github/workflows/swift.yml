@@ -21,4 +21,4 @@ jobs:
           xcodegen
       - name: Build iOS
         run: |
-          set -o pipefail && xcodebuild build -scheme "TumblrNPF" -destination "OS=16.4,name=iPhone 14 Pro" -skipPackagePluginValidation | xcbeautify
+          set -o pipefail && xcodebuild test -scheme "TumblrNPF" -destination "OS=16.4,name=iPhone 14 Pro" -skipPackagePluginValidation | xcbeautify
