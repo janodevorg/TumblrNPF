@@ -26,7 +26,7 @@ packages:
     
   CodableHelpers:
     url: git@github.com:janodevorg/CodableHelpers.git
-    from: 1.0.0
+    from: 1.0.3
 
 targets:
 
